@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+
+{% block navbar %}
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">Aplosn</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Membres</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Formation</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Newsletter</a></li>
+
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            const navLink = document.querySelectorAll(".nav-link");
+
+            if (hamburger && navMenu) {
+                hamburger.addEventListener("click", function () {
+                    hamburger.classList.toggle("active");
+                    navMenu.classList.toggle("active");
+                });
+
+                navLink.forEach(link => link.addEventListener("click", function () {
+                    hamburger.classList.remove("active");
+                    navMenu.classList.remove("active");
+                }));
+            }
+        });
+    </script>
+    </div>
+{% endblock %}
