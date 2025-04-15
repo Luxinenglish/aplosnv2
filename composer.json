@@ -1,4 +1,6 @@
 {
+    "name": "luxinenglish/aplosnv2",
+    "description": "A brief description of your project.",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
